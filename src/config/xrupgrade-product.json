@@ -1,0 +1,181 @@
+{
+  "product": {
+    "id": "floyd_weekender",
+    "name": "Floyd Weekender",
+    "model": {
+      "path": "public/Weekender.glb",
+      "camera": {
+        "distance": "2.0m",
+        "target": "0m 0m 0m",
+        "orbit": "0deg 75deg 2.0m"
+      }
+    },
+    "materials": {
+      "primary": "TkaninaMat",
+      "secondary": "KaiseviMat",
+      "accent": "Kais"
+    }
+  },
+  "defaultColor": "bahia_red",
+  "defaultStrap": "selected",
+  "defaultEnvironment": "studio",
+  "colors": [
+    {
+      "id": "bahia_red",
+      "name": "Bahia Red",
+      "preview": "public/assets/bahia_red.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/BahiaRed_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/BahiaRed_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "hot_orange",
+      "name": "Hot Orange",
+      "preview": "public/assets/hot_orange.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/HotOrange_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/HotOrange_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "sugar_pink",
+      "name": "Sugar Pink",
+      "preview": "public/assets/sugar_pink.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/SugarPink_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/SugarPink_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "hollywood_pink",
+      "name": "Hollywood Pink",
+      "preview": "public/assets/hollywood_pink.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/HollywoodPink_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/HollywoodPink_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "funky_lilac",
+      "name": "Funky Lilac",
+      "preview": "public/assets/funky_lilac.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/FunkyLilac_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/FunkyLilac_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "sky_blue",
+      "name": "Sky Blue",
+      "preview": "public/assets/sky_blue.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/SkyBlue_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/SkyBlue_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "shark_blue",
+      "name": "Shark Blue",
+      "preview": "public/assets/shark_blue.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/SharkBlue_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/SharkBlue_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "bronco_brown",
+      "name": "Bronco Brown",
+      "preview": "public/assets/bronco_brown.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/BroncoBrown_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/BroncoBrown_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/Metalic_TkaninaMat_MetRough.jpg"
+      }
+    },
+    {
+      "id": "gator_green",
+      "name": "Gator Green",
+      "preview": "public/assets/gator_green.jpg",
+      "textures": {
+        "primary": "public/assets/Weekender/GatorGreen_TkaninaMat_BaseColor.jpg",
+        "accent": "public/assets/Weekender/GatorGreen_KaiseviMat_BaseColor.jpg",
+        "roughness": "public/assets/Weekender/NonMetalic_TkaninaMat_MetRough.jpg"
+      }
+    }
+  ],
+  "straps": [
+    {
+      "id": "selected",
+      "name": "Match",
+      "type": "dynamic",
+      "cssClass": "selected-color"
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "texture": "public/assets/Weekender/HotOrange_KaiseviMat_BaseColor.jpg",
+      "cssClass": "orange"
+    }
+  ],
+  "environments": [
+    {
+      "id": "studio",
+      "name": "Studio",
+      "gradient": "linear-gradient(45deg, #f8f9fa, #e9ecef)",
+      "background": "radial-gradient(ellipse at top, #f8f9fa 0%, #ffffff 100%), linear-gradient(to bottom, #ffffff 0%, #f1f3f4 100%)",
+      "lighting": "neutral"
+    },
+    {
+      "id": "beach",
+      "name": "Beach",
+      "gradient": "linear-gradient(45deg, #87CEEB, #F0E68C)",
+      "background": "radial-gradient(ellipse at top, #87CEEB 0%, #F0E68C 50%), linear-gradient(to bottom, #87CEEB 0%, #F0E68C 70%, #DEB887 100%)",
+      "lighting": "warm"
+    },
+    {
+      "id": "cafe",
+      "name": "Café",
+      "gradient": "linear-gradient(45deg, #8B4513, #D2B48C)",
+      "background": "radial-gradient(ellipse at top, #8B4513 0%, #D2B48C 50%), linear-gradient(to bottom, #8B4513 0%, #D2B48C 50%, #F5DEB3 100%)",
+      "lighting": "warm"
+    },
+    {
+      "id": "urban",
+      "name": "Urban",
+      "gradient": "linear-gradient(45deg, #696969, #A9A9A9)",
+      "background": "radial-gradient(ellipse at top, #696969 0%, #A9A9A9 50%), linear-gradient(to bottom, #696969 0%, #A9A9A9 50%, #D3D3D3 100%)",
+      "lighting": "cool"
+    }
+  ],
+  "ui": {
+    "theme": "glass",
+    "animations": {
+      "desktop": "full",
+      "mobile": "minimal"
+    },
+    "features": [
+      "color",
+      "strap",
+      "environment",
+      "ar",
+      "qr",
+      "share",
+      "screenshot",
+      "reset",
+      "fullscreen"
+    ]
+  },
+  "defaults": {
+    "color": "bahia_red",
+    "strap": "selected",
+    "environment": "studio"
+  }
+}
