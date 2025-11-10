@@ -1,0 +1,24 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="60" rx="8" fill="url(#logoGradient)" />
+  
+  <!-- XR Text -->
+  <text x="20" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">XR</text>
+  
+  <!-- Upgrade Text -->
+  <text x="60" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="white" opacity="0.9">Upgrade</text>
+  
+  <!-- 3D Cube Icon -->
+  <g transform="translate(160, 15)">
+    <polygon points="0,15 15,5 30,15 15,25" fill="white" opacity="0.8"/>
+    <polygon points="15,5 30,15 30,30 15,40 0,30 0,15" fill="white" opacity="0.6"/>
+    <polygon points="0,15 15,25 15,40 0,30" fill="white" opacity="0.4"/>
+  </g>
+</svg> 
