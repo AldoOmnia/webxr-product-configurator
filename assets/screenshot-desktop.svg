@@ -1,0 +1,102 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c3cfe2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="8" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glassEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+      <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.1 0"/>
+    </filter>
+  </defs>
+  
+  <!-- Browser Window -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+  
+  <!-- Browser Chrome -->
+  <rect x="0" y="0" width="1920" height="80" fill="#f8f9fa"/>
+  <circle cx="40" cy="40" r="12" fill="#ff5f56"/>
+  <circle cx="80" cy="40" r="12" fill="#ffbd2e"/>
+  <circle cx="120" cy="40" r="12" fill="#27ca3f"/>
+  
+  <!-- Address Bar -->
+  <rect x="200" y="20" width="1500" height="40" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="220" y="45" fill="#718096" font-family="Arial, sans-serif" font-size="16">https://floyd-weekender.xrupgrade.com</text>
+  
+  <!-- Main Content Area -->
+  <rect x="0" y="80" width="1920" height="1000" fill="url(#bgGrad)"/>
+  
+  <!-- XRUpgrade Logo -->
+  <text x="1720" y="140" fill="#667eea" font-family="Arial, sans-serif" font-size="24" font-weight="bold">XRUpgrade</text>
+  
+  <!-- Left Sidebar (Desktop UI) -->
+  <rect x="80" y="200" width="300" height="700" rx="25" fill="rgba(255,255,255,0.1)" filter="url(#glassEffect)"/>
+  <rect x="80" y="200" width="300" height="700" rx="25" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Color Section -->
+  <text x="120" y="250" fill="#2d3748" font-family="Arial, sans-serif" font-size="18" font-weight="bold">COLORS</text>
+  <circle cx="140" cy="290" r="25" fill="#e74c3c"/>
+  <circle cx="200" cy="290" r="25" fill="#f39c12"/>
+  <circle cx="260" cy="290" r="25" fill="#9b59b6"/>
+  <circle cx="320" cy="290" r="25" fill="#3498db"/>
+  <circle cx="140" cy="350" r="25" fill="#2ecc71"/>
+  <circle cx="200" cy="350" r="25" fill="#e67e22"/>
+  <circle cx="260" cy="350" r="25" fill="#34495e"/>
+  <circle cx="320" cy="350" r="25" fill="#95a5a6"/>
+  
+  <!-- Strap Section -->
+  <text x="120" y="420" fill="#2d3748" font-family="Arial, sans-serif" font-size="18" font-weight="bold">STRAPS</text>
+  <rect x="120" y="440" width="100" height="40" rx="20" fill="#667eea"/>
+  <text x="170" y="465" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">Match</text>
+  <rect x="240" y="440" width="100" height="40" rx="20" fill="#f39c12"/>
+  <text x="290" y="465" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">Orange</text>
+  
+  <!-- Environment Section -->
+  <text x="120" y="530" fill="#2d3748" font-family="Arial, sans-serif" font-size="18" font-weight="bold">ENVIRONMENT</text>
+  <rect x="120" y="550" width="70" height="50" rx="10" fill="linear-gradient(45deg, #f8f9fa, #e9ecef)"/>
+  <text x="155" y="580" text-anchor="middle" fill="#2d3748" font-family="Arial, sans-serif" font-size="10">Studio</text>
+  <rect x="200" y="550" width="70" height="50" rx="10" fill="linear-gradient(45deg, #87CEEB, #F0E68C)"/>
+  <text x="235" y="580" text-anchor="middle" fill="#2d3748" font-family="Arial, sans-serif" font-size="10">Beach</text>
+  <rect x="280" y="550" width="70" height="50" rx="10" fill="linear-gradient(45deg, #8B4513, #D2B48C)"/>
+  <text x="315" y="580" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Café</text>
+  
+  <!-- Main 3D Viewer Area -->
+  <rect x="420" y="120" width="1400" height="900" rx="20" fill="rgba(255,255,255,0.05)"/>
+  
+  <!-- Large 3D Bag in center -->
+  <g transform="translate(960, 400)" filter="url(#shadow)">
+    <path d="M-150 -100 L150 -100 L150 200 L-150 200 Z" fill="url(#bagGrad)" opacity="0.9"/>
+    <path d="M-150 -100 L150 -100 L170 -120 L-130 -120 Z" fill="url(#bagGrad)" opacity="0.7"/>
+    <path d="M150 -100 L150 200 L170 180 L170 -120 Z" fill="url(#bagGrad)" opacity="0.5"/>
+    
+    <!-- Handle -->
+    <ellipse cx="0" cy="-140" rx="60" ry="20" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.8"/>
+    
+    <!-- Strap -->
+    <path d="M-100 -70 Q0 -40 100 -70" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.6"/>
+    
+    <!-- Zipper detail -->
+    <line x1="0" y1="-100" x2="0" y2="-40" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+    <circle cx="0" cy="-30" r="8" fill="#ffffff" opacity="0.6"/>
+  </g>
+  
+  <!-- Floating Action Buttons -->
+  <circle cx="1750" cy="300" r="30" fill="#667eea" filter="url(#shadow)"/>
+  <text x="1750" y="310" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20">AR</text>
+  
+  <circle cx="1750" cy="380" r="30" fill="#764ba2" filter="url(#shadow)"/>
+  <text x="1750" y="390" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16">📷</text>
+  
+  <circle cx="1750" cy="460" r="30" fill="#2ecc71" filter="url(#shadow)"/>
+  <text x="1750" y="470" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16">🔗</text>
+  
+  <!-- Product Title -->
+  <text x="960" y="1000" text-anchor="middle" fill="#2d3748" font-family="Arial, sans-serif" font-size="32" font-weight="bold">Floyd Weekender - 3D Configurator</text>
+</svg> 

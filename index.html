@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Floyd Weekender - Professional 3D Configurator by XRUpgrade">
+  <meta name="keywords" content="3D, configurator, product customization, Floyd, Weekender, XRUpgrade">
+  <meta name="author" content="XRUpgrade Team">
+
+  <!-- Permissions Policy for WebXR -->
+  <meta http-equiv="Permissions-Policy"
+    content="xr-spatial-tracking=*, camera=*, microphone=*, gyroscope=*, accelerometer=*, magnetometer=*">
+
+  <title>Floyd Weekender - 3D Configurator</title>
+
+  <!-- Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- QR Code Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+
+<body>
+  <!-- Main Configurator Container -->
+  <div id="configurator-container"></div>
+
+  <!-- Loading Screen -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <h2>Floyd Weekender</h2>
+      <p>Loading your 3D configurator...</p>
+    </div>
+  </div>
+
+  <!-- Application Script -->
+  <script type="module">
+    import { XRUpgradeConfigurator } from './src/XRUpgradeConfigurator.js';
+    import { Logger } from './src/utils/Logger.js';
+
+    // Initialize configurator when DOM is ready
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        // Load configuration
+        const config = await fetch('src/config/xrupgrade-product.json')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Failed to load config: ${response.status}`);
+            }
+            return response.json();
+          });
+
+        // Create and initialize configurator
+        const configurator = new XRUpgradeConfigurator(config);
+        await configurator.initialize('configurator-container');
+
+        // Hide loading screen
+        setTimeout(() => {
+          const loadingOverlay = document.getElementById('loadingOverlay');
+          if (loadingOverlay) {
+            loadingOverlay.style.opacity = '0';
+            setTimeout(() => {
+              loadingOverlay.style.display = 'none';
+            }, 500);
+          }
+        }, 1000);
+
+        // Make configurator available for debugging (development only)
+        if (window.location.hostname === 'localhost' || window.location.search.includes('debug=true')) {
+          window.configurator = configurator;
+        }
+
+        // Optional: Analytics tracking
+        configurator.on('colorChanged', (color) => {
+          // Add your analytics tracking here
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'color_changed', {
+              'custom_color': color
+            });
+          }
+        });
+
+        configurator.on('strapChanged', (strap) => {
+          // Add your analytics tracking here
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'strap_changed', {
+              'custom_strap': strap
+            });
+          }
+        });
+
+        configurator.on('environmentChanged', (environment) => {
+          // Add your analytics tracking here
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'environment_changed', {
+              'custom_environment': environment
+            });
+          }
+        });
+
+      } catch (error) {
+        Logger.error('Failed to initialize configurator:', error);
+
+        // Show error message
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+          loadingOverlay.innerHTML = `
+            <div style="text-align: center; color: #f44336;">
+              <h2 style="font-family: 'Inter', sans-serif; font-weight: 600; margin: 0 0 10px;">
+                ⚠️ Loading Error
+              </h2>
+              <p style="font-family: 'Inter', sans-serif; margin: 0;">
+                Unable to load the configurator. Please refresh the page.
+              </p>
+              <button onclick="window.location.reload()" style="
+                margin-top: 20px;
+                padding: 10px 20px;
+                background: #667eea;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+              ">
+                Retry
+              </button>
+            </div>
+          `;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

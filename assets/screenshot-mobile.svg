@@ -1,0 +1,65 @@
+<svg width="390" height="844" viewBox="0 0 390 844" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c3cfe2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Phone Frame -->
+  <rect width="390" height="844" rx="40" fill="#000000"/>
+  <rect x="10" y="10" width="370" height="824" rx="30" fill="url(#bgGrad)"/>
+  
+  <!-- Status Bar -->
+  <rect x="10" y="10" width="370" height="50" rx="30" fill="#000000" opacity="0.1"/>
+  <text x="30" y="40" fill="#000000" font-family="Arial, sans-serif" font-size="16" font-weight="bold">9:41</text>
+  <circle cx="340" cy="35" r="8" fill="#00ff00"/>
+  <rect x="350" y="30" width="20" height="10" rx="2" fill="#000000" opacity="0.3"/>
+  
+  <!-- Main 3D Viewer Area -->
+  <rect x="20" y="70" width="350" height="500" rx="20" fill="#ffffff" opacity="0.1"/>
+  
+  <!-- 3D Bag in center -->
+  <g transform="translate(120, 200)" filter="url(#shadow)">
+    <path d="M30 60 L120 60 L120 160 L30 160 Z" fill="url(#bagGrad)" opacity="0.9"/>
+    <path d="M30 60 L120 60 L130 50 L40 50 Z" fill="url(#bagGrad)" opacity="0.7"/>
+    <path d="M120 60 L120 160 L130 150 L130 50 Z" fill="url(#bagGrad)" opacity="0.5"/>
+    <ellipse cx="75" cy="45" rx="20" ry="8" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.8"/>
+    <path d="M45 70 Q75 85 105 70" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6"/>
+  </g>
+  
+  <!-- Mobile UI Controls at bottom -->
+  <rect x="20" y="590" width="350" height="180" rx="20" fill="rgba(255,255,255,0.9)" filter="url(#shadow)"/>
+  
+  <!-- Color Options -->
+  <text x="40" y="620" fill="#2d3748" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Colors</text>
+  <circle cx="60" cy="650" r="15" fill="#e74c3c"/>
+  <circle cx="100" cy="650" r="15" fill="#f39c12"/>
+  <circle cx="140" cy="650" r="15" fill="#9b59b6"/>
+  <circle cx="180" cy="650" r="15" fill="#3498db"/>
+  <circle cx="220" cy="650" r="15" fill="#2ecc71"/>
+  
+  <!-- Strap Options -->
+  <text x="40" y="700" fill="#2d3748" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Straps</text>
+  <rect x="50" y="710" width="60" height="25" rx="12" fill="#667eea"/>
+  <text x="80" y="727" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Match</text>
+  <rect x="120" y="710" width="60" height="25" rx="12" fill="#f39c12"/>
+  <text x="150" y="727" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="10">Orange</text>
+  
+  <!-- Action Buttons -->
+  <circle cx="320" cy="650" r="20" fill="#667eea"/>
+  <text x="320" y="655" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="16">AR</text>
+  
+  <circle cx="320" cy="700" r="20" fill="#764ba2"/>
+  <text x="320" y="705" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">📷</text>
+  
+  <!-- Home indicator -->
+  <rect x="170" y="810" width="50" height="4" rx="2" fill="#000000" opacity="0.3"/>
+</svg> 

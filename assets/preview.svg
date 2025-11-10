@@ -1,0 +1,59 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f7fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c3cfe2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="8" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Main Content Area -->
+  <g transform="translate(100, 100)">
+    <!-- 3D Bag Illustration -->
+    <g transform="translate(200, 50)" filter="url(#shadow)">
+      <!-- Main bag body -->
+      <path d="M50 100 L250 100 L250 300 L50 300 Z" fill="url(#bagGrad)" opacity="0.9"/>
+      <path d="M50 100 L250 100 L270 80 L70 80 Z" fill="url(#bagGrad)" opacity="0.7"/>
+      <path d="M250 100 L250 300 L270 280 L270 80 Z" fill="url(#bagGrad)" opacity="0.5"/>
+      
+      <!-- Handle -->
+      <ellipse cx="150" cy="70" rx="40" ry="15" fill="none" stroke="#ffffff" stroke-width="8" opacity="0.8"/>
+      
+      <!-- Strap -->
+      <path d="M80 120 Q150 150 220 120" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.6"/>
+      
+      <!-- Color swatches -->
+      <circle cx="300" cy="150" r="20" fill="#e74c3c"/>
+      <circle cx="300" cy="190" r="20" fill="#f39c12"/>
+      <circle cx="300" cy="230" r="20" fill="#9b59b6"/>
+      <circle cx="300" cy="270" r="20" fill="#3498db"/>
+    </g>
+    
+    <!-- Text Content -->
+    <g transform="translate(600, 80)">
+      <text x="0" y="40" fill="#2d3748" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Floyd Weekender</text>
+      <text x="0" y="80" fill="#4a5568" font-family="Arial, sans-serif" font-size="24">3D Product Configurator</text>
+      
+      <text x="0" y="140" fill="#718096" font-family="Arial, sans-serif" font-size="18">✨ Customize colors and straps</text>
+      <text x="0" y="170" fill="#718096" font-family="Arial, sans-serif" font-size="18">📱 AR preview on mobile</text>
+      <text x="0" y="200" fill="#718096" font-family="Arial, sans-serif" font-size="18">🎯 Real-time 3D visualization</text>
+      <text x="0" y="230" fill="#718096" font-family="Arial, sans-serif" font-size="18">🚀 Powered by XRUpgrade</text>
+      
+      <!-- CTA Button -->
+      <rect x="0" y="280" width="200" height="50" rx="25" fill="url(#bagGrad)"/>
+      <text x="100" y="310" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Try Now</text>
+    </g>
+  </g>
+  
+  <!-- XRUpgrade branding -->
+  <text x="1100" y="600" text-anchor="end" fill="#667eea" font-family="Arial, sans-serif" font-size="14" opacity="0.7">by XRUpgrade</text>
+</svg> 
