@@ -1,4 +1,4 @@
-# 🎯 XRUpgrade Product Configurator
+# 🎯 Omnia WebXR Product Configurator
 
 A professional, modular 3D product configurator built with vanilla JavaScript and Google's model-viewer. Designed for high performance, universal compatibility, and easy customization.
 
